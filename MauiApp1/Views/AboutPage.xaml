@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    clr-namespace maps Models to models XML namespace 
+-->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:MauiApp1.Models"
              x:Class="MauiApp1.Views.AboutPage">
+    <!--
+        BindingContext prop of ContentPage is set to an instance
+        of the Note.Models.About class,  using the XML namespace and object
+        of models:About. 
+        This was set using 'property element syntax' instead of an XML attribute.
+    -->
     <ContentPage.BindingContext>
         <models:About />
     </ContentPage.BindingContext>
