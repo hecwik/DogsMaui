@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    
-<!-- 
-Root object of the XAML markup.
-Takes objects of TabBar and produces the UI.
--->
-<Shell 
+<Shell
     x:Class="MauiApp1.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp1"
     Shell.FlyoutBehavior="Disabled">
-    <!-- 
-    Tab bar is the content of the Shell 
-    Represents organization of apps visual hierarchy.
-    -->
+
     <TabBar>
-        <!-- 
-        Both ShellContents are pointing to the 'MainPage' page. 
-        -->
         <ShellContent
-        Title="Notes"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Icon="{OnPlatform 'icon_notes.png', 
+            Title="Notes"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="{OnPlatform 'icon_notes.png', 
             iOS='icon_notes_ios.png', 
             MacCatalyst='icon_notes_ios.png'}" 
             />
 
         <ShellContent
-        Title="About"
-        ContentTemplate="{DataTemplate local:AboutPage}"
-        Icon="{OnPlatform 'icon_about.png', 
+            Title="About"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Icon="{OnPlatform 'icon_about.png', 
             iOS='icon_about_ios.png', 
             MacCatalyst='icon_about_ios.png'}" 
             />
     </TabBar>
-    
 
 </Shell>
